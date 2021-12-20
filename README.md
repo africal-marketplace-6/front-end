@@ -8,7 +8,7 @@ While in the root directory of the project, run npm install to install all of th
 Run npm start to run the app.
 
 Git Flow
-For using Git and GitHub on this project, please read and follow this guide that was provided by Edd Burke.
+For using Git and GitHub on this project, please read and follow this guide (https://www.notion.so/Git-for-Build-Sprint-20ce2d09dc0e47b1af5d51821b54b810) that was provided by Edd Burke.
 
 Make sure to not work directly on main. Always create a feature branch with an appropriate name.
 
