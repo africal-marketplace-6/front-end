@@ -1,14 +1,36 @@
-import React from 'react';
+import React, {useState} from 'react';
+
+
+const initialStateValues = {
+    user : {
+        username : '',
+        password : ''
+    }
+};
 
 
 export default function Login() {
+    
+    const [state, setState] = useState(initialStateValues);
+
+    const {user} = state;
+
+    const changeUsername = (evt) => {
+        const {name, value} = evt.target;
+        this.setState({[name]: value})
+    }
+            
+
+
     return (
+        
         <div>
+            <pre>{JSON.stringify(state)}</pre>
         <h1>Log in</h1>
             <form className="form-container">
                 <label>
                     Username
-                    <input type="text"/>
+                    <input type="text" name="username" value={user.username} onChange={changeUsername}/>
                 </label>
                 <label>
                     Password
