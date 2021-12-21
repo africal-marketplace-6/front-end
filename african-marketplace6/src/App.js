@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import {BrowserRouter as  Router, Route, Link, Switch } from "react-router-dom";
-import Dashboard from "./Dashboard/Dashboard";
+import Homepage from "./components/Homepage";
 import Login from "./components/login";
 import PrivateRoute from "./components/PrivateRoute";
 import SignUp from "./components/SignUp";
@@ -33,12 +33,12 @@ function App() {
           </ul>
         </header>
         <Switch>
-          {/* <Route path="/home" element={<Dashboard />}> */}
+          <Route path="/home" component={Homepage}/>
           <Route path="/login" component={Login} />
           <Route path="/signup" component={SignUp} />
           <PrivateRoute exact path="/category" component={Category} />
           <Route path="/logout" component={Logout} />
-          {/* <Route path="/" component={Home} /> */}
+          <Route path="/" component={Homepage} />
         </Switch>
       </div>
     </Router>
