@@ -1,28 +1,47 @@
-import React from 'react';
-import './App.css';
-import { Route, Routes, Link } from 'react-router-dom';
-import Dashboard from './Dashboard/Dashboard';
-import Login from './components/login';
+import React from "react";
+import "./App.css";
+import {BrowserRouter as  Router, Route, Link, Switch } from "react-router-dom";
+import Dashboard from "./Dashboard/Dashboard";
+import Login from "./components/login";
+import PrivateRoute from "./components/PrivateRoute";
+import SignUp from "./components/SignUp";
+import Category from "./components/Category";
+import Logout from "./components/Logout";
 
 function App() {
   return (
-    <div className="App">
-      <h1>TO BE DELETED TEST TESTE</h1>
-      <nav>
-      
-      <div className="nav-links">
-        <Link to="/">Home</Link>
-        <Link to="/login">Log in</Link>
-
-
+    <Router>
+      <div className="App">
+        <header>
+          <h2>FRIENDS DATABASE</h2>
+          <ul>
+            <li>
+              <Link to="/home">Home</Link>
+            </li>
+            <li>
+              <Link to="/category">Category</Link>
+            </li>
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
+            <li>
+              <Link to="/signup">Signup</Link>
+            </li>
+            <li>
+              <Link to="/logout">Logout</Link>
+            </li>
+          </ul>
+        </header>
+        <Switch>
+          {/* <Route path="/home" element={<Dashboard />}> */}
+          <Route path="/login" component={Login} />
+          <Route path="/signup" component={SignUp} />
+          <PrivateRoute exact path="/category" component={Category} />
+          <Route path="/logout" component={Logout} />
+          {/* <Route path="/" component={Home} /> */}
+        </Switch>
       </div>
-      </nav>
-      <Routes>
-        <Route path="/dashboard" element={<Dashboard/>}>
-        </Route>
-        <Route path="/login" element={<Login/>}/>
-      </Routes>
-    </div>
+    </Router>
   );
 }
 
