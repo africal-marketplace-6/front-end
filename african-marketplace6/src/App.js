@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
 import { Route, Routes, Link } from 'react-router-dom';
-import Dashboard from './Dashboard/Dashboard';
+import Homepage from './homepage/Homepage';
 import Login from './components/login';
+
 
 function App() {
   return (
@@ -11,14 +12,14 @@ function App() {
       <nav>
       
       <div className="nav-links">
-        <Link to="/">Home</Link>
+        <Link to="/homepage">Home</Link>
         <Link to="/login">Log in</Link>
 
 
       </div>
       </nav>
       <Routes>
-        <Route path="/dashboard" element={<Dashboard/>}>
+        <Route path="/homepage" element={<Homepage/>}>
         </Route>
         <Route path="/login" element={<Login/>}/>
       </Routes>
