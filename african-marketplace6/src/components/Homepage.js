@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom'
+import {getItems} from '../MockData'
 
 export default function Homepage() {
     const items = ['bananas ', 'apples ', 'oranges ', 'pineapples '];
@@ -19,7 +20,7 @@ export default function Homepage() {
             
             <div className='products'>
                 <h2>Products</h2>
-                <ul>{words}</ul>
+                {/* <ul>{words}</ul> */}
             </div>
             <nav>
                 <Link to="/signup">Sign up</Link>

@@ -8,6 +8,8 @@ import SignUp from "./components/SignUp";
 import Category from "./components/Category";
 import Logout from "./components/Logout";
 
+const items = ['bananas ', 'apples ', 'oranges ', 'pineapples '];
+
 function App() {
   return (
     <Router>
