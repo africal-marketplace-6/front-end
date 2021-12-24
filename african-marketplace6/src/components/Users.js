@@ -22,8 +22,7 @@ export default function Users() {
         return (
           <div className="user">
             <Link key={user.user_id} to={`/users/${user.user_id}`}>
-              {" "}
-              {user.username}{" "}
+              {user.username}
             </Link>
           </div>
         );

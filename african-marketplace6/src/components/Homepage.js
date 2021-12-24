@@ -41,6 +41,6 @@ export default function Homepage() {
       <nav>
         <Link to="/signup">Sign up</Link>
       </nav>
-    </divgit add>
+    </div>
   );
 }
